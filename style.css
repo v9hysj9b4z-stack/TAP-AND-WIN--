@@ -437,3 +437,9 @@ h1{
     }
 
 }
+.logo-text{
+    color:#FFD700;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:20px;
+}
