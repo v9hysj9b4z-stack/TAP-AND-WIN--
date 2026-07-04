@@ -1,0 +1,282 @@
+/* ========================= */
+/* TAP & WIN */
+/* STYLE PART 1 */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#0f0f0f;
+
+    color:white;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Glow Background */
+
+.background-glow{
+
+    position:fixed;
+
+    width:700px;
+
+    height:700px;
+
+    background:#ffb300;
+
+    border-radius:50%;
+
+    filter:blur(250px);
+
+    opacity:.12;
+
+    z-index:-1;
+
+}
+
+/* Main Container */
+
+.app{
+
+    width:95%;
+
+    max-width:500px;
+
+    text-align:center;
+
+    padding:35px 25px;
+
+}
+
+/* Logo */
+
+.logo{
+
+    width:110px;
+
+    margin-bottom:20px;
+
+    animation:fadeDown 1s ease;
+
+}
+
+/* Title */
+
+h1{
+
+    font-size:58px;
+
+    font-weight:800;
+
+    color:#FFD700;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+}
+
+/* Subtitle */
+
+.subtitle{
+
+    color:#d6d6d6;
+
+    font-size:20px;
+
+    line-height:32px;
+
+    margin-bottom:45px;
+
+}
+
+/* Wheel */
+
+.wheel-wrapper{
+
+    position:relative;
+
+    width:420px;
+
+    height:420px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Canvas */
+
+#wheelCanvas{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    background:#222;
+
+    border:10px solid #FFD700;
+
+    box-shadow:
+
+        0 0 20px rgba(255,215,0,.3),
+
+        0 0 60px rgba(255,215,0,.15);
+
+}
+
+/* Pointer */
+
+.pointer{
+
+    position:absolute;
+
+    top:-12px;
+
+    width:0;
+
+    height:0;
+
+    border-left:22px solid transparent;
+
+    border-right:22px solid transparent;
+
+    border-top:42px solid #FFD700;
+
+    z-index:99;
+
+}
+
+/* Spin Button */
+
+#spinBtn{
+
+    width:100%;
+
+    margin-top:45px;
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#FFD700;
+
+    color:#111;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#spinBtn:hover{
+
+    transform:scale(1.03);
+
+}
+
+#spinBtn:active{
+
+    transform:scale(.98);
+
+}
+
+#spinBtn:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+/* Result */
+
+#resultBox{
+
+    margin-top:40px;
+
+    padding:25px;
+
+    background:#1c1c1c;
+
+    border-radius:18px;
+
+    border:2px solid #FFD700;
+
+}
+
+#resultTitle{
+
+    color:#FFD700;
+
+    font-size:34px;
+
+}
+
+#resultPrize{
+
+    margin-top:10px;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* Animation */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
