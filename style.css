@@ -280,3 +280,160 @@ h1{
     }
 
 }
+/* ========================= */
+/* STYLE PART 2 */
+/* ========================= */
+
+/* Floating animation */
+
+.logo{
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* Glowing title */
+
+h1{
+
+    text-shadow:
+
+        0 0 10px rgba(255,215,0,.5),
+
+        0 0 20px rgba(255,215,0,.4),
+
+        0 0 40px rgba(255,215,0,.2);
+
+}
+
+/* Wheel animation */
+
+#wheelCanvas{
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+#wheelCanvas:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:
+
+        0 0 25px rgba(255,215,0,.5),
+
+        0 0 70px rgba(255,215,0,.2);
+
+}
+
+/* Button glow */
+
+#spinBtn{
+
+    box-shadow:
+
+        0 10px 35px rgba(255,215,0,.45);
+
+}
+
+#spinBtn:hover{
+
+    box-shadow:
+
+        0 15px 45px rgba(255,215,0,.65);
+
+}
+
+/* Result animation */
+
+#resultBox{
+
+    animation:popup .45s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.6);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* Footer */
+
+.footer{
+
+    margin-top:35px;
+
+    color:#777;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    .subtitle{
+
+        font-size:17px;
+
+        line-height:28px;
+
+    }
+
+    .wheel-wrapper{
+
+        width:320px;
+
+        height:320px;
+
+    }
+
+    #spinBtn{
+
+        font-size:18px;
+
+        padding:18px;
+
+    }
+
+}
