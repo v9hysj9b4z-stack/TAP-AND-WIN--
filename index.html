@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tap & Win</title>
+
+    <meta name="theme-color" content="#111111">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<div class="app">
+
+    <!-- LOGO -->
+
+    <img src="images/logo.png" class="logo" alt="Logo">
+
+    <!-- TITLE -->
+
+    <h1>Tap & Win</h1>
+
+    <p class="subtitle">
+
+        Spin the wheel for a chance to win an instant prize.
+
+    </p>
+
+    <!-- WHEEL -->
+
+    <div class="wheel-wrapper">
+
+        <div class="pointer"></div>
+
+        <canvas id="wheelCanvas" width="420" height="420"></canvas>
+
+    </div>
+
+    <!-- BUTTON -->
+
+    <button id="spinBtn">
+
+        SPIN NOW
+
+    </button>
+
+    <!-- RESULT -->
+
+    <div id="resultBox" class="hidden">
+
+        <h2 id="resultTitle">
+
+            Congratulations!
+
+        </h2>
+
+        <p id="resultPrize">
+
+            FREE COFFEE
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- AUDIO -->
+
+<audio id="spinSound" preload="auto">
+
+    <source src="sounds/spin.mp3" type="audio/mpeg">
+
+</audio>
+
+<audio id="winSound" preload="auto">
+
+    <source src="sounds/win.mp3" type="audio/mpeg">
+
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
